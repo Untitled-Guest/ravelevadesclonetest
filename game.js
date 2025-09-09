@@ -499,10 +499,10 @@ class Area {
             }
           });
         });
-        const dampering = 0.99;
+        const dampering = 0.03;
         this.entities[entityType].forEach (entitying1 => {
-          entitying1.vel.x *= dampering;
-          entitying1.vel.y *= dampering;
+          entitying1.vel.x *= Math.exp(-dampering * time / (1000 / 30));
+          entitying1.vel.y *= Math.exp(-dampering * time / (1000 / 30));
           console.log(entitying1);
         });
       }
