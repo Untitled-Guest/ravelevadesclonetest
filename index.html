@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>evades</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="texture/favicon.ico" />
+</head>
+<body>
+  <div id="menu">
+    <div id="main">
+      <div id="play">
+        <button type="button" name="button" id="connect">Enter game</button><br><br>
+        <div id="name">
+          <input type="text" id="nick" value="Sandbox" placeholder="Username">
+        </div>
+        <select id='hero'>
+          <option>Normal</option>
+          <option>Magmax</option>
+          <option>Rime</option>
+          <option>Morfe</option>
+          <option>Aurora</option>
+          <option>Necro</option>
+          <option>Brute</option>
+          <option>Shade</option>
+          <option>Chrono</option>
+          <option>Reaper</option>
+          <option>Rameses</option>
+          <option>Cent</option>
+          <option>Jötunn</option>
+          <option>Candy</option>
+          <option>Mirage</option>
+          <option>Clown</option>
+          <option>Burst</option>
+          <option>Lantern</option>
+          <option>Pole</option>
+          <option>Polygon</option>
+          <option>Idk</option>
+        </select>
+      </div>
+    </div>
+    <div id='alert'></div>
+    <div id="panel">
+      <div id="interact">
+        <label for="load" class="file-upload-label">
+          <input type="file" id="load" accept="application/x-yaml, .json, .yaml, .txt" name="file">
+        </label>
+      </div>
+      <select id='world'>
+        <option>Original</option>
+        <option>Hard</option>
+        <option>Bruh</option>
+        <option>Custom</option>
+      </select>
+      <select id='diff'>
+        <option>Easy</option>
+        <option>Medium</option>
+        <option>Hard</option>
+      </select>
+      <select id='wreath'>
+        <option>Gold</option>
+        <option>Spring</option>
+        <option>Autumn</option>
+        <option>Winter</option>
+        <option>Summer</option>
+        <option>Rose</option>
+        <option>Stars</option>
+        <option>Flames</option>
+        <option>Halo</option>
+        <option>Doughnut</option>
+        <option>Pirate Hat</option>
+        <option>Fruit Hat</option>
+        <option>Flower Hat</option>
+        <option>Legacy Hat</option>
+        <option>Sunglasses</option>
+        <option>Santa Hat</option>
+        <option>Blue Santa Hat</option>
+        <option>Blue Flames</option>
+        <option>Orbit Ring</option>
+        <option>Sticky Coat</option>
+        <option>Toxic Coat</option>
+        <option>Gold Crown</option>
+        <option>Silver Crown</option>
+        <option>Bronze Crown</option>
+        <option>Champion Jewels</option>
+        <option>Gold Jewels</option>
+        <option>Silver Jewels</option>
+        <option>Bronze Jewels</option>
+        <option>Winter Olympics</option>
+        <option>Summer Olympics</option>
+        <option>Summer Olympics 2</option>
+        <option>None</option>
+      </select>
+    </div>
+    <div id="settings">
+      <div>Settings:</div>
+      <div class="settingsElement" style="line-height:75%;">
+        <input type="checkbox" id="mouse_toggle" checked>
+        <label for="mouse_toggle">Mouse Toggle Movement</label>
+        <br><br>
+        <input type="checkbox" id="outline" checked>
+        <label for="outline">Enemy outline</label>
+        <br><br>
+        <input type="checkbox" id="projectile_outline" checked>
+        <label for="projectile_outline">Projectile outline</label>
+        <br><br>
+        <input type="checkbox" id="different_outlines">
+        <label for="different_outlines">Different outlines</label>
+        <br><br>
+        <input type="checkbox" id="timer">
+        <label for="timer">Timer</label>
+        <br><br>
+        <input type="checkbox" id="tiles" checked>
+        <label for="tiles">Tiles</label>
+        <br><br>
+        <input type="checkbox" id="fading_effects" checked>
+        <label for="fading_effects">Fading Effects</label>
+        <br><br>
+        <input type="checkbox" id="no_points">
+        <label for="no_points">No Points</label>
+        <br><br>
+        <input type="checkbox" id="max_abilities">
+        <label for="max_abilities">Max Abilities</label>
+        <br><br>
+        <input type="checkbox" id="max_stats">
+        <label for="max_stats">Max Stats</label>
+        <br><br>
+        <input type="checkbox" id="slow_upgrade">
+        <label for="slow_upgrade">Evades Upgrade System</label>
+        <br><br>
+        <input type="checkbox" id="convert_to_legacy_speed">
+        <label for="convert_to_legacy_speed">Convert To Legacy Speed</label>
+        <br><br>
+        <input type="checkbox" id="death_cooldown">
+        <label for="death_cooldown">After Death Cooldown</label>
+        <br><br>
+        <input type="checkbox" id="effect_blending" checked>
+        <label for="effect_blending">Effect Blending</label>
+        <br><br>
+        <input type="checkbox" id="dev">
+        <label for="dev">Test Mode</label>
+        <br><br>
+        <input type="checkbox" id="cheats">
+        <label for="cheats">Cheats</label>
+        <br><br>
+        <input type="checkbox" id="v_sync">
+        <label for="v_sync">V-Sync</label>
+        <br><br>
+        <label for="fps_limit">FPS Limit:</label>
+        <select id="fps_limit">
+          <option value="unlimited">Unlimited FPS</option>
+          <option value="60" selected>60 FPS</option>
+          <option value="30">30 FPS</option>
+        </select>
+        <br><br>
+        <label for="ui_scale">UI Scale:</label>
+        <input type="range" id="ui_scale" min="0.2" max="1" step="0.1" value="1" style="width: 100px;">
+        <span id="ui_scale_value">1.0</span>
+        <br><br>
+        <label for="input_delay">Input Delay:</label>
+        <input type="number" id="input_delay" placeholder="Default is 0ms" value="0" min="0" style="width:100px">
+        <br><br>
+        <label for="tick_delay">Tick Delay:</label>
+        <input type="number" id="tick_delay" placeholder="1 tick is 33ms" value="2" min="0" style="width:100px">
+      </div>
+    </div>
+    <div id="hotkeys" style="position: absolute; top: 10px; right: 10px; background-color: rgba(0,0,0,0.7); padding: 10px; border-radius: 5px; color: white;">
+      <h3 style="color: #ffcc00; text-align: center;">Hotkeys</h3>
+      <ul style="list-style-type: none; padding: 0;">
+        <li>W/↑ - Move Up</li>
+        <li>S/↓ - Move Down</li>
+        <li>A/← - Move Left</li>
+        <li>D/→ - Move Right</li>
+        <li>Shift - Slow Movement</li>
+        <li>Z/J - Use First Ability</li>
+        <li>X/K - Use Second Ability</li>
+        <li>C/L - Use Third Ability</li>
+        <li>H - Hide Herocard</li>
+        <li>M - Hide Minimap</li>
+        <li>, - Hide Overlay</li>
+      </ul>
+      <h4 style="color: #ffcc00; margin-top: 10px;">Cheats:</h4>
+      <ul style="list-style-type: none; padding: 0;">
+        <li>T - Teleport Forward</li>
+        <li>E - Teleport Backward</li>
+        <li>R - Teleport 10 Areas Forward</li>
+        <li>V - God Mode</li>
+        <li>B - Unlimited Energy</li>
+        <li>N - No Collision</li>
+      </ul>
+      <h4 style="color: #ffcc00; margin-top: 10px;">Test Mode:</h4>
+      <ul style="list-style-type: none; padding: 0;">
+        <li>[ - Create SafePoint</li>
+        <li>] - Clear SafePoint</li>
+        <li>P - Change Timer Clear</li>
+        <li>O - Reset Timer</li>
+        <li>END - Reset Your Run</li>
+      </ul>
+    </div>
+  </div>
+  <script src="listeners.js"></script>
+  <div id="gamed" style="display:none;">
+    <canvas id="game" width="1280" height="720"></canvas>
+  </div>
+  <script src="evades_yaml.js"></script>
+  <script src="maps.js"></script>
+  <script src="vector.js"></script>
+  <script src="utils.js"></script>
+  <script src="entities.js"></script>
+  <script src="game.js"></script>
+  <script src="drawer.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
