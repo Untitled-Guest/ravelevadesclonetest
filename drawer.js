@@ -172,6 +172,7 @@ function renderEntities(area, players, focus) {
   const focusY = focus.y;
   // Render effects first
   for (const entityType in { ...area.entities, ...area.effects }) {
+    // if (area.entities[entityType]) {} else console.log(area.effects[entityType]);
     const entities = area.entities[entityType] ? area.entities[entityType] : area.effects[entityType];
     const firstEntity = entities[0];
     if (!firstEntity) continue;

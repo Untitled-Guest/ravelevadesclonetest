@@ -467,7 +467,7 @@ class Area {
     // Update dynamic entities
     for (const entityType in this.entities) {
       // console.log(entityType);
-      if (entityType[0] == "g"){
+      if (entityType[0] == "g" && entityType[6] == "d" && true){
         // console.log("ASDADS");
         // for (const entitying1 in this.entities[entityType]) {
         //   for (const entitying2 in this.entities[entityType]) {
